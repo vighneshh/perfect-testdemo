@@ -6,13 +6,19 @@ description: null
 version: 4c7b0e4c8993e520c7f645d66c2dc92d
 # The work queue that will handle this deployment's runs
 work_queue_name: default
-work_pool_name: null
+work_pool_name: default-agent-pool
 tags:
 - dev
 parameters: {}
 schedule: null
-is_schedule_active: null
+is_schedule_active: true
 infra_overrides: {}
+
+###
+### DO NOT EDIT BELOW THIS LINE
+###
+flow_name: hello-world
+manifest_path: null
 infrastructure:
   type: process
   env: {}
@@ -21,18 +27,15 @@ infrastructure:
   command: null
   stream_output: true
   working_dir: null
+  _block_document_id: 2546557d-5a80-493f-a81f-fa1e2d6bd59b
+  _block_document_name: anonymous-69261c40-6244-423c-aa73-a0c2e77b6e49
+  _is_anonymous: true
   block_type_slug: process
   _block_type_slug: process
-
-###
-### DO NOT EDIT BELOW THIS LINE
-###
-flow_name: hello-world
-manifest_path: null
 storage:
   repository: https://github.com/vighneshh/perfect-testdemo.git
   reference: null
-  access_token: '**********'
+  access_token: null
   include_git_objects: true
   _block_document_id: ee278d7e-f6b7-4432-bde9-e9a86e1992f0
   _block_document_name: github-helloworld
@@ -47,6 +50,6 @@ parameter_openapi_schema:
   properties: {}
   required: null
   definitions: null
-timestamp: '2024-01-27T13:40:18.838034+00:00'
+timestamp: '2024-01-27T13:46:26.679360+00:00'
 triggers: []
 enforce_parameter_schema: null
