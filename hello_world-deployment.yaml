@@ -3,15 +3,21 @@
 ###
 name: firstdeployment
 description: null
-version: ba01bd760a4add98ad26d8d373995195
+version: 5ca32506d7df7a499609ae049243975c
 # The work queue that will handle this deployment's runs
 work_queue_name: default
-work_pool_name: null
+work_pool_name: default-agent-pool
 tags: []
 parameters: {}
 schedule: null
-is_schedule_active: null
+is_schedule_active: true
 infra_overrides: {}
+
+###
+### DO NOT EDIT BELOW THIS LINE
+###
+flow_name: hello-world
+manifest_path: null
 infrastructure:
   type: process
   env: {}
@@ -20,16 +26,22 @@ infrastructure:
   command: null
   stream_output: true
   working_dir: null
+  _block_document_id: 0683d8be-d34c-4214-89b3-661d0e5ceeb9
+  _block_document_name: anonymous-8857cc56-129d-415a-8287-2a9db67d4c16
+  _is_anonymous: true
   block_type_slug: process
   _block_type_slug: process
-
-###
-### DO NOT EDIT BELOW THIS LINE
-###
-flow_name: hello-world
-manifest_path: null
-storage: null
-path: C:\dataengcourse\prefect-demo
+storage:
+  repository: https://github.com/vighneshh/perfect-testdemo.git
+  reference: null
+  access_token: '**********'
+  include_git_objects: true
+  _block_document_id: ee278d7e-f6b7-4432-bde9-e9a86e1992f0
+  _block_document_name: github-helloworld
+  _is_anonymous: false
+  block_type_slug: github
+  _block_type_slug: github
+path: ''
 entrypoint: hello-prefect.py:hello_world
 parameter_openapi_schema:
   title: Parameters
@@ -37,6 +49,6 @@ parameter_openapi_schema:
   properties: {}
   required: null
   definitions: null
-timestamp: '2024-01-27T10:21:19.833961+00:00'
+timestamp: '2024-01-27T13:20:40.747827+00:00'
 triggers: []
 enforce_parameter_schema: null
