@@ -8,7 +8,7 @@ string_block = String.load("vtest")
 
 @task
 def create_msg():
-	msg = "Hello Prefect from task"
+	msg = "From Github: Hello Prefect from task"
 	return msg
 
 @flow
