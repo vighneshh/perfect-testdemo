@@ -1,23 +1,18 @@
 ###
 ### A complete description of a Prefect Deployment for flow 'hello-world'
 ###
-name: firstdeployment
+name: second-deployment
 description: null
-version: 5ca32506d7df7a499609ae049243975c
+version: 4c7b0e4c8993e520c7f645d66c2dc92d
 # The work queue that will handle this deployment's runs
 work_queue_name: default
-work_pool_name: default-agent-pool
-tags: []
+work_pool_name: null
+tags:
+- dev
 parameters: {}
 schedule: null
-is_schedule_active: true
+is_schedule_active: null
 infra_overrides: {}
-
-###
-### DO NOT EDIT BELOW THIS LINE
-###
-flow_name: hello-world
-manifest_path: null
 infrastructure:
   type: process
   env: {}
@@ -26,11 +21,14 @@ infrastructure:
   command: null
   stream_output: true
   working_dir: null
-  _block_document_id: 0683d8be-d34c-4214-89b3-661d0e5ceeb9
-  _block_document_name: anonymous-8857cc56-129d-415a-8287-2a9db67d4c16
-  _is_anonymous: true
   block_type_slug: process
   _block_type_slug: process
+
+###
+### DO NOT EDIT BELOW THIS LINE
+###
+flow_name: hello-world
+manifest_path: null
 storage:
   repository: https://github.com/vighneshh/perfect-testdemo.git
   reference: null
@@ -49,6 +47,6 @@ parameter_openapi_schema:
   properties: {}
   required: null
   definitions: null
-timestamp: '2024-01-27T13:20:40.747827+00:00'
+timestamp: '2024-01-27T13:40:18.838034+00:00'
 triggers: []
 enforce_parameter_schema: null

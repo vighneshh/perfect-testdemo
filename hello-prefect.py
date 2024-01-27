@@ -1,5 +1,8 @@
 from prefect import flow, task
 from prefect.blocks.system import String
+from prefect.filesystems import GitHub
+
+github_block = GitHub.load("github-helloworld")
 
 string_block = String.load("vtest")
 
